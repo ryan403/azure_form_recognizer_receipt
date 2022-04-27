@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Recognition Sample</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="key.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+
+<h1>表單內容辨識</h1>
+輸入圖片網址，然後按下<strong>【內容辨識】</strong>按鈕
+<br><br>
+Image to read:
+<input type="text" name="inputImage" id="inputImage" size="90"
+    value="https://raw.githubusercontent.com/MicrosoftLearning/AI-900-AIFundamentals/main/data/vision/receipt.jpg" />
+<button onclick="processImage()">內容辨識</button>
+<br><br>
+<div id="wrapper" style="width:90%; display:table;">
+    <div id="jsonOutput" style="width:400px; display:table-cell;">
+        Response:
+        <br><br>
+        <textarea id="responseTextArea" class="UIInput"
+                  style="width:380px; height:400px;"></textarea>
+    </div>
+    <div id="imageDiv" style="width:330px; display:table-cell;">
+        Source image:
+        <br><br>
+        <img id="sourceImage" width="300" height="400" />
+    </div>
+    <div id="ResultDiv" style="width:300px; display:table-cell;">
+        Result:
+        <br><br>
+        <div id="Receipt">
+            <h1 id="MerchantName">XXXXXXX</h1>
+            <p id="MerchantAddress">888 Happy Street</p>
+            <p id="MerchantPhoneNumber">666-666-6666</p>
+            <p id="TransactionDateAndTime">2/22/2022 14:02</p>
+            <hr>
+            <ol id="items">
+                <li>1 Banana $1.0</li>
+            </ol>
+            <hr>
+            <div id="numbers">
+                <p id="Subtotal">Sub-Total <span>$1.0</span></p>
+                <p id="Tax">Tax <span>$0.01</span></p>
+                <p>&nbsp;</p>
+                <p id="Total">Total <span>$1.01</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
